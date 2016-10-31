@@ -18,8 +18,9 @@ class Player
     map.player_did_move(self)
   end
 
-  def move
+  def move(dir = nil)
     directions = [:top, :bot, :left, :right]
+    (move_toward(dir) && return) if dir && can_move_toward(dir)
     directions.each do |d|
       if can_move_toward(d)
         move_toward(d)

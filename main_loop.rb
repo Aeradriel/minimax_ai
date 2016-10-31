@@ -17,5 +17,6 @@ loop do
     players[i].change_pos(x, y)
   end
 
-  players[p].move
+  d = MiniMax.new(map, players, p).simulate_for(0, p)
+  players[p].move(d)
 end

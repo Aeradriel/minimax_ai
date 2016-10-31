@@ -1,7 +1,7 @@
 task default: :concat
 
 task :concat do
-  files = %w[class.rb player.rb map.rb main_loop.rb]
+  files = %w[class.rb player.rb map.rb mini_max.rb main_loop.rb]
   content = ''
   files.each do |f|
     content << "# #{f}\n"

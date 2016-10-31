@@ -46,7 +46,7 @@ class Map
   def distance_between(x1, y1, x2, y2)
     dist_x = x2 - x1
     dist_y = y2 - y1
-    sqrt(dist_x * dist_x + dist_y * dist_y)
+    Math.sqrt(dist_x * dist_x + dist_y * dist_y)
   end
 
   def closest_player_from_square(x, y)
@@ -78,5 +78,6 @@ class Map
         influence[closest] += 1 if closest
       end
     end
+    influence
   end
 end
